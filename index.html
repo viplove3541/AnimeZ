@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeZ...</title>
+  <link rel="icon" type="image/x-icon" href="./icons8-play-100.png">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./navbar/navbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./footer/footer.css" />
+</head>
+
+<body>
+  <nav id="navbar" class="navbar is-link p-4" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand" style="margin-right: 10px;">
+      <a class="navbar-item " href="./index.html">
+        <p class="title has-text-white">
+          AnimeZ...
+        </p>
+      </a>
+
+      <a role="button" id="nav" class="navbar-burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+
+      <div class="nav-mobile">
+        <div class="group">
+          <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+          <input id="search" placeholder="Search" type="search" name="search" class="input" required
+            aria-required="true">
+        </div>
+        <a onclick="redirectToAnotherPage()">
+          Home
+        </a>
+
+        <a onclick="redirectToAnotherPage2()">
+          Top Airing
+        </a>
+
+        <a onclick="redirectToAnotherPage3()">
+          Popular
+        </a>
+        <a onclick="redirectToAnotherPage4()">
+          Movies
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" onclick="redirectToAnotherPage()">
+            Home
+          </a>
+
+          <a class="navbar-item" onclick="redirectToAnotherPage2()">
+            Top Airing
+          </a>
+
+          <a class="navbar-item" onclick="redirectToAnotherPage3()">
+            Popular
+          </a>
+
+          <a class="navbar-item" onclick="redirectToAnotherPage4()">
+            Movies
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+              <g>
+                <path
+                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                </path>
+              </g>
+            </svg>
+            <input id="searchDesktop" placeholder="Search" type="search" name="search" class="input" required
+              aria-required="true">
+          </div>
+        </div>
+      </div>
+  </nav>
+  <div id="progress-bar">
+    <div class="bar"></div>
+  </div>
+
+  <section class="carousel-container" id="carousel-container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-scrollbar"></div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <div class="loader-container">
+      <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+      </div>
+    </div>
+
+    <h2 class="subheading">Trending Anime</h2>
+    <div class="container">
+      <div class="loader-container2">
+        <div class="three-body2">
+          <div class="three-body__dot"></div>
+          <div class="three-body__dot"></div>
+          <div class="three-body__dot"></div>
+        </div>
+      </div>
+      <div id="card_wrapper" class="card_wrapper">
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button id="prev" class="button is-link is-outlined">Prev</button>
+      <button id="next" class="button is-link is-outlined">Next</button>
+    </div>
+  </main>
+
+  <a id="scrollToTop" href="#carousel-container">
+    <img src="./images/up.png" alt="scrollToTop"> </a>
+  <app-footer></app-footer>
+
+  <!-- Javascript File  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./footer/footer.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

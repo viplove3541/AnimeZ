@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeZ...</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="./anime-details.css">
+  <link rel="stylesheet" href="../navbar/navbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://vjs.zencdn.net/7.2.3/video-js.css">
+  <link rel="stylesheet" href="../footer/footer.css">
+</head>
+
+<body>
+  <app-navbar></app-navbar>
+  <main>
+    <div class="search-result" id="card_wrapper">
+      <h2 class="subheading"></h2>
+    </div>
+    <div id="progress-bar">
+      <div class="bar"></div>
+    </div>
+    <div class="loader-container">
+      <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="btn-container"></div>
+      <button id="btn-back" onclick="goBack()" class="button is-link is-outlined">Go Back</button>
+      <div id="anime_div" class="anime_div">
+      </div>
+      <div id="episode_div" class="episode_div">
+        <h3 id="ep-header" class="title">Episode List</h3>
+        <hr id="hr">
+        <div id="list-ep" class="list-ep"></div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../navbar/navbar.js"></script>
+  <script src="./anime-details.js"></script>
+  <script src="../footer/footer.js"></script>
+</body>
+
+</html>

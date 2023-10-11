@@ -1,0 +1,16 @@
+
+.footer {
+    display: none;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: lightslategray;
+    color: black
+  }
+  
+  footer strong,
+  footer a {
+    color: black !important;
+    text-decoration: underline;
+  }
+  

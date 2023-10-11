@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeZ...</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="./stream-page.css">
+  <link rel="stylesheet" href="../navbar/navbar.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="../footer/footer.css">
+</head>
+
+<body>
+  <app-navbar></app-navbar>
+
+  <div class="search-result" id="card_wrapper">
+    <h2 class="subheading"></h2>
+  </div>
+  <div class="video-container" >
+    <div class="loader-container">
+      <div class="three-body">
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+        <div class="three-body__dot"></div>
+      </div>
+    </div>
+      <div id="progress-bar">
+        <div class="bar"></div>
+      </div>
+      <main>
+        <div class="main-container">
+          <div class="btn-container">
+            <button id="btn-back" onclick="goBack()" class="button is-link is-outlined">Go Back</button>
+            <div class="btn2-container">
+              <button id="btn-prev" class="button is-link is-outlined">Prev Episode</button>
+              <button id="btn-next" class="button is-link is-outlined">Next Episode</button>
+            </div>
+          </div>
+
+          <video id="video" controls></video>
+          <div class="lower-container">
+            <div class="quality-container">
+              <h3 style="margin-bottom: 20px;">Update video quality here.</h3>
+              <button id="360p" class="button is-link is-outlined">360p</button>
+              <button id="480p" class="button is-link is-outlined">480p</button>
+              <button id="720p" class="button is-link is-outlined">720p</button>
+              <button id="1080p" class="button is-link is-outlined">1080p</button>
+              <button id="auto" class="button is-link is-outlined">default</button>
+            </div>
+
+            <div class="server-container">
+              <h3 style="margin-bottom: 20px;">Watch here if video is not working.</h3>
+              <button id="Vidstreaming" class="button is-link is-outlined">Vidstreaming</button>
+              <button id="GogoServer" class="button is-link is-outlined">Gogo Server</button>
+              <button id="Streamsb" class="button is-link is-outlined">Streamsb</button>
+            </div>
+          </div>
+
+          <div class="ep-info-container">
+            <img src="" id="episode-image"></img>
+            <div class="right">
+              <h2 id="episode-title"></h2>
+              <h2 id="episode-description"></h2>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+
+  <!-- Javascript File  -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../navbar/navbar.js"></script>
+  <script src="./stream-page2.js"></script>
+  <script src="../footer/footer.js"></script>
+</body>
+
+</html>
